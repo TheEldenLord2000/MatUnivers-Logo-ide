@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatUniverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(160deg, #0d1b2a, #000814);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+            position: sticky;
+            top: 0;
+        }
+
+        /* Logo styles */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mat-univers-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb, #4e74b2, #a1c4fd, #766fa9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .emoji {
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00d4ff;
+            color: black;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #00aacc;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .card h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <span class="mat-univers-logo">MatUniverse</span>
+        <span class="emoji">🌌</span>
+    </div>
+    <nav>
+        <a href="#">Opgaver</a>
+        <a href="#">Videoer</a>
+        <a href="#">Spil</a>
+        <a href="#">Om</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Velkommen til MatUniverse</h2>
+        <p>Lær matematik på en sjov, interaktiv og gratis måde — uden logins og besvær.</p>
+        <a href="#start" class="btn">Kom i gang</a>
+    </div>
+</section>
+
+<section class="cards" id="start">
+    <div class="card">
+        <h3>📚 Opgaver</h3>
+        <p>Fra simple plusstykker til avanceret algebra — vælg dit niveau.</p>
+    </div>
+    <div class="card">
+        <h3>🎥 Videoer</h3>
+        <p>Korte og letforståelige forklaringer på matematiske emner.</p>
+    </div>
+    <div class="card">
+        <h3>🎮 Spil</h3>
+        <p>Træn dine færdigheder gennem sjove, interaktive spil.</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 MatUniverse — Lavet med ❤️ for matematik
+</footer>
+
+</body>
+</html>
